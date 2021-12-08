@@ -1,0 +1,11 @@
+body  { background-color: #8FBC8F;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;}
+
+h1    { font-size: 32px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: #00FF7F;}
+
+h2    { font-size: 24px;
+        font-weight: 700;}
