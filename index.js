@@ -61,6 +61,33 @@ app.get('/movies', (req, res) => {
   res.json(topMovies);
 });
 
+app.get('/movies/:genres', (req, res) => {
+  res.send('Movie title and its genre');
+});
+
+app.get('/movies:/directors', (req, res) => {
+  res.send('Director Info');
+});
+
+app.post('/users', (req, res) => {
+  res.send('Registration completed');
+});
+
+app.put('/users/:username', (req, res) => {
+  res.send('Information updated');
+});
+
+app.post('/users/:username/movies/:favorites', (req, res) => {
+  res.send('Movie was added to favorites');
+});
+
+app.delete('/users/:username/movies/:favorites', (req, res) => {
+  res.send('Movie was deleted from  your favorites');
+});
+
+app.delete('/users/:username', (req, res) => {
+  res.send('Account deletion complete');
+});
 
 //static request//
 app.use(express.static('public', {

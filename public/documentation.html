@@ -16,6 +16,85 @@
         </h2>
 
 
+<table>
+  <tr>
+    <thead>
+      <td>Request</td>
+      <td>URL</td>
+      <td>HTTP Method</td>
+      <td>Response</td>
+    </thead>
+  </tr>
+  <tr>
+    <td>Get a list of all movies</td>
+    <td>/movies</td>
+    <td>GET</td>
+    <td>A JSON object holding data about all movies</td>
+  </tr>
+  <tr>
+    <td>Return data about a single movie by title</td>
+    <td>/movies/:title</td>
+    <td>GET</td>
+    <td>A JSON object holding data about a single movie containing the movie title, actor, genre 
+      and year released. Example: {title: Soul Food
+                                   actor: Nia Long
+                                   genre: Drama
+                                   year: 1997}
+    </td>
+  </tr>
+  <tr>
+    <td>Return data about a genre by name/title</td>
+    <td>/movies/:genres</td>
+    <td>GET</td>
+    <td>A JSON object holding data about a single movie containing genre</td>
+  </tr>
+  <tr>
+    <td>Return data about a director</td>
+    <td>/movies/:directors</td>
+    <td>GET</td>
+    <td>A JSON object holding data about a single movie director and his info.
+        Example: {director: George Tillman Jr. 
+                  birth year: 1969
+                  bio: Short biography of director}
+    </td>
+  </tr>
+  <tr>
+    <td>Allow new users to register</td>
+    <td>/users</td>
+    <td>POST</td>
+    <td>Create JSON object with new user data. Example: {Name: Quan Mccrea
+                                                         User Name: atlestate1
+                                                         Password: ATL1759_
+                                                         Email Address: atlestate1@yahoo.com}
+    </td>
+  </tr>
+  <tr>
+    <td>Allow users to update their user info(username)</td>
+    <td>/users/:username</td>
+    <td>PUT</td>
+    <td>Update JSON object with updated username</td>
+  </tr>
+  <tr>
+    <td>Allow users to add a movie to their list of favorites</td>
+    <td>/movies:/favorites</td>
+    <td>POST</td>
+    <td>A message indicating a successful add</td>
+  </tr>
+  <tr>
+    <td>Allow users to remove a movie from their list of favorites</td>
+    <td>/movies/:favorites</td>
+    <td>DELETE</td>
+    <td>A message indicating a successful add</td>
+  </tr>
+  <tr>
+    <td>Allow existing users to deregister</td>
+    <td>/users/:username</td>
+    <td>DELETE</td>
+    <td>Delete JSON object containing user data</td>
+  </tr>
+  
+</table>
+
 </body>
 
 </html>
