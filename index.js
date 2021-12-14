@@ -48,24 +48,17 @@ let topMovies = [
   }
 ];
 
+//static request//
+app.use(express.static('public'));
+
 // create GET requests //
 app.get('/', (req, res) => {
   res.send('Welcome to MyFlix!');
 });
 
-app.get('/documentation', (req, res) => {                  
-    res.sendFile('public/documentation.html', { root: __dirname });
-  });
-
 app.get('/movies', (req, res) => {
   res.json(topMovies);
 });
-
-
-//static request//
-app.use(express.static('public', {
-    extensions: ['html'],
-}));
 
 //error handling//
 app.use((err, req, res, next) => {
