@@ -1,0 +1,37 @@
+<<<<<<< Updated upstream:styles.css
+body  { background-color: #8FBC8F;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;}
+
+h1    { font-size: 32px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: #00FF7F;}
+
+h2    { font-size: 24px;
+        font-weight: 700;}
+=======
+body  { background-color: #8FBC8F;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;}
+
+h1    { font-size: 32px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: #00008B;}
+
+h2    { font-size: 24px;
+        font-weight: 700;}
+
+table { margin: auto;
+        width: 90%;
+        border-spacing: 0;
+        background-color: #8FBC8F;}
+
+td, th { padding: 10px; }
+
+th { text-decoration: underline;}
+		
+tr:nth-of-type(odd) { background-color: #696969;}
+>>>>>>> Stashed changes:public/styles.css
