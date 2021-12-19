@@ -60,11 +60,11 @@ app.get('/movies', (req, res) => {
   res.json(topMovies);
 });
 
-app.get('/movies/:genres', (req, res) => {
+app.get('/genres/:genre', (req, res) => {
   res.send('Movie title and its genre');
 });
 
-app.get('/movies/:directors', (req, res) => {
+app.get('/directors/:director', (req, res) => {
   res.send('Director Info');
 });
 

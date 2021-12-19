@@ -42,13 +42,13 @@
   </tr>
   <tr>
     <td>Return data about a genre by name/title</td>
-    <td>/movies/:genres</td>
+    <td>/genres/:genres</td>
     <td>GET</td>
     <td>A JSON object holding data about a single movie containing genre</td>
   </tr>
   <tr>
     <td>Return data about a director</td>
-    <td>/movies/:directors</td>
+    <td>/directors/:directors</td>
     <td>GET</td>
     <td>A JSON object holding data about a single movie director and his info.
         Example: {director: George Tillman Jr. 
@@ -74,13 +74,13 @@
   </tr>
   <tr>
     <td>Allow users to add a movie to their list of favorites</td>
-    <td>/movies:/favorites</td>
+    <td>/users/:username/movies:/favorites</td>
     <td>POST</td>
     <td>A message indicating a successful add</td>
   </tr>
   <tr>
     <td>Allow users to remove a movie from their list of favorites</td>
-    <td>/movies/:favorites</td>
+    <td>/users/:username/movies:/favorites</td>
     <td>DELETE</td>
     <td>A message indicating a successful add</td>
   </tr>
