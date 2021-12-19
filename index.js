@@ -48,14 +48,13 @@ let topMovies = [
   }
 ];
 
+//static request//
+app.use(express.static('public'));
+
 // create GET requests //
 app.get('/', (req, res) => {
   res.send('Welcome to MyFlix!');
 });
-
-app.get('/documentation', (req, res) => {                  
-    res.sendFile('public/documentation.html', { root: __dirname });
-  });
 
 app.get('/movies', (req, res) => {
   res.json(topMovies);
@@ -65,7 +64,7 @@ app.get('/movies/:genres', (req, res) => {
   res.send('Movie title and its genre');
 });
 
-app.get('/movies:/directors', (req, res) => {
+app.get('/movies/:directors', (req, res) => {
   res.send('Director Info');
 });
 
@@ -89,10 +88,6 @@ app.delete('/users/:username', (req, res) => {
   res.send('Account deletion complete');
 });
 
-//static request//
-app.use(express.static('public', {
-    extensions: ['html'],
-}));
 
 //error handling//
 app.use((err, req, res, next) => {
