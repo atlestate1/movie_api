@@ -60,11 +60,15 @@ app.get('/movies', (req, res) => {
   res.json(topMovies);
 });
 
-app.get('/genres/:genre', (req, res) => {
+app.get('/movies/:title', (req, res) => {
+  res.json('Show specific movie');
+});
+
+app.get('/genres/:genres', (req, res) => {
   res.send('Movie title and its genre');
 });
 
-app.get('/directors/:director', (req, res) => {
+app.get('/directors/:directors', (req, res) => {
   res.send('Director Info');
 });
 
@@ -99,3 +103,5 @@ app.use((err, req, res, next) => {
 app.listen(8080, () => {
   console.log('Your app is listening on port 8080.');
 });
+
+//database names: movies: movieAPI, genres: genresAPI, directors: directorsAPI, users: usersAPI//
