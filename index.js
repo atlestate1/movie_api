@@ -64,11 +64,11 @@ app.get('/movies/:title', (req, res) => {
   res.json('Show specific movie');
 });
 
-app.get('/genres/:genres', (req, res) => {
+app.get('/genres/:name', (req, res) => {
   res.send('Movie title and its genre');
 });
 
-app.get('/directors/:directors', (req, res) => {
+app.get('/directors/:name', (req, res) => {
   res.send('Director Info');
 });
 
@@ -80,11 +80,11 @@ app.put('/users/:username', (req, res) => {
   res.send('Information updated');
 });
 
-app.post('/users/:username/movies/:favorites', (req, res) => {
+app.post('/users/:username/:favoriteMovies', (req, res) => {
   res.send('Movie was added to favorites');
 });
 
-app.delete('/users/:username/movies/:favorites', (req, res) => {
+app.delete('/users/:username/:favoriteMovies', (req, res) => {
   res.send('Movie was deleted from  your favorites');
 });
 
@@ -104,4 +104,4 @@ app.listen(8080, () => {
   console.log('Your app is listening on port 8080.');
 });
 
-//database names: movies: movieAPI, genres: genresAPI, directors: directorsAPI, users: usersAPI//
+
