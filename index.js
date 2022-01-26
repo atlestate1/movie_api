@@ -35,7 +35,7 @@ app.get('/movies', (req, res) => {
 });
 
 app.get('/movies/:title', (req, res) => {
-  movieAPI.findOne({ title: req.params.title })
+  movieAPI.findOne({ Title: req.params.title })
     .then((movie) => {
       res.json(movie);
     })
@@ -48,19 +48,27 @@ app.get('/movies/:title', (req, res) => {
 app.get('/genres/:genre', (req, res) => {
   movieAPI.findOne({ 'Genre.Name': req.params.genre })
   .then((movie) => {
+    if (movie) {
     res.json(movie.Genre);
-  })
+  } else {
+    res.json("There is no movie with this genre.");
+  }
+})
   .catch((err) => {
     console.error(err);
     res.status(500).send('Error: ' + err);
   });
 });
 
-app.get('/directors/:name', (req, res) => {
+app.get('/directors/:director', (req, res) => {
   movieAPI.findOne({ 'Director.Name': req.params.director })
   .then((movie) => {
-    res.json(movie.Director);
-  })
+    if (movie) {
+      res.json(movie.Director);
+    } else {
+    res.json("There is no director with that name.");
+  }
+})
   .catch((err) => {
     console.error(err);
     res.status(500).send('Error: ' + err);

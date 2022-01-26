@@ -33,37 +33,47 @@
     <td>Return data about a single movie by title</td>
     <td>/movies/:title</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie containing the movie title, actor, genre 
-      and year released. Example: {title: Soul Food
-                                   actor: Nia Long
-                                   genre: Drama
-                                   year: 1997}
+    <td>"Genre": <br> 
+        "Name": "Romance",<br>
+        "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+        "Director": <br>
+        "Name": "Reginald Hudlin", <br>
+        "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
+        "Birthday": "1961-01-08" <br>
+        "Actors": [], <br>
+        "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
+        "Title": "Boomerang", <br>
+        "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
+        "ImagePath": "boomerang.png", <br>
+        "Featured": true <br>
     </td>
   </tr>
   <tr>
     <td>Return data about a genre by name/title</td>
-    <td>/genres/:name</td>
+    <td>/genres/:genre</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie containing genre</td>
+    <td>"Name": "Romance", <br>
+        "Description": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+    </td>
   </tr>
   <tr>
     <td>Return data about a director</td>
-    <td>/directors/:name</td>
+    <td>/directors/:director</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie director and his info.
-        Example: {director: George Tillman Jr. 
-                  birth year: 1969
-                  bio: Short biography of director}
+    <td> "Name": "F. Gary Gray", <br>
+         "Bio": "F. Gary Gray is an American film director, producer, and music video director.", <br>
+         "Birthday": "1969-01-08" <br>
+         "Death": "2019-01-08" <br>
     </td>
   </tr>
   <tr>
     <td>Allow new users to register</td>
     <td>/users</td>
     <td>POST</td>
-    <td>Create JSON object with new user data. Example: {Name: Quan Mccrea
-                                                         User Name: atlestate1
-                                                         Password: ATL1759_
-                                                         Email Address: atlestate1@yahoo.com}
+    <td> Name: Quan Mccrea <br>
+         User Name: atlestate1 <br>
+         Password: ATL1759_ <br>
+         Email Address: atlestate1@yahoo.com <br>
     </td>
   </tr>
   <tr>
