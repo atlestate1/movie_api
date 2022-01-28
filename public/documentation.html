@@ -33,47 +33,49 @@
     <td>Return data about a single movie by title</td>
     <td>/movies/:title</td>
     <td>GET</td>
-    <td>"Genre": <br> 
-        "Name": "Romance",<br>
-        "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
-        "Director": <br>
-        "Name": "Reginald Hudlin", <br>
-        "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
-        "Birthday": "1961-01-08" <br>
-        "Actors": [], <br>
-        "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
-        "Title": "Boomerang", <br>
-        "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
-        "ImagePath": "boomerang.png", <br>
-        "Featured": true <br>
+    <td>  "Genre": { <br>
+          "Name": "Romance", <br>
+          "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+        }, <br> 
+          "Director": { <br>
+          "Name": "Reginald Hudlin", <br>
+          "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
+          "Birthday": "1961-01-01" <br>
+        }, <br>
+          "Actors": [], <br>
+          "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
+          "Title": "Boomerang", <br>
+          "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
+          "ImagePath": "boomerang.png", <br>
+          "Featured": true <br>
     </td>
   </tr>
   <tr>
     <td>Return data about a genre by name/title</td>
     <td>/genres/:genre</td>
     <td>GET</td>
-    <td>"Name": "Romance", <br>
-        "Description": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+    <td>{"Name": "Romance", <br>
+        "Description": "Romantic love stories between main characters that focus on passion, romance and affection."} <br>
     </td>
   </tr>
   <tr>
     <td>Return data about a director</td>
     <td>/directors/:director</td>
     <td>GET</td>
-    <td> "Name": "F. Gary Gray", <br>
+    <td> {"Name": "F. Gary Gray", <br>
          "Bio": "F. Gary Gray is an American film director, producer, and music video director.", <br>
          "Birthday": "1969-01-08" <br>
-         "Death": "2019-01-08" <br>
+         "Death": "2019-01-08" }<br>
     </td>
   </tr>
   <tr>
     <td>Allow new users to register</td>
     <td>/users</td>
     <td>POST</td>
-    <td> Name: Quan Mccrea <br>
+    <td>{ Name: Quan Mccrea <br>
          User Name: atlestate1 <br>
          Password: ATL1759_ <br>
-         Email Address: atlestate1@yahoo.com <br>
+         Email Address: atlestate1@yahoo.com } <br>
     </td>
   </tr>
   <tr>
