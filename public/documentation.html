@@ -27,7 +27,23 @@
     <td>Get a list of all movies</td>
     <td>/movies</td>
     <td>GET</td>
-    <td>A JSON object holding data about all movies</td>
+    <td> "Title: "Boomerang" <br>
+         "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken." <br>
+         "Genre": { <br>
+         "Name": "Romance", <br>
+         "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+       }, <br> 
+         "Director": { <br>
+         "Name": "Reginald Hudlin", <br>
+         "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
+         "Birthday": "1961-01-01" <br>
+       }, <br>
+         "Actors": [], <br>
+         "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
+         "Title": "Boomerang", <br>
+         "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
+         "ImagePath": "boomerang.png", <br>
+         "Featured": true <br></td>
   </tr>
   <tr>
     <td>Return data about a single movie by title</td>
@@ -82,25 +98,28 @@
     <td>Allow users to update their user info(username)</td>
     <td>/users/:username</td>
     <td>PUT</td>
-    <td>Update JSON object with updated username</td>
+    <td>{ Name: Quan Mccrea <br>
+          User Name: atlestate1 <br>
+          Password: ATL1759_ <br>
+          Email Address: qspoindexter@gmail.com } <br></td>
   </tr>
   <tr>
     <td>Allow users to add a movie to their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>POST</td>
-    <td>A message indicating a successful add</td>
+    <td>A message indicating a successful add.</td>
   </tr>
   <tr>
     <td>Allow users to remove a movie from their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>DELETE</td>
-    <td>A message indicating a successful add</td>
+    <td>A message indicating a successful deletion.</td>
   </tr>
   <tr>
     <td>Allow existing users to deregister</td>
     <td>/users/:username</td>
     <td>DELETE</td>
-    <td>Delete JSON object containing user data</td>
+    <td>A message indicating a successful deletion.</td>
   </tr>
   
 </table>
