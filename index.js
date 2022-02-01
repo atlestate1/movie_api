@@ -122,7 +122,7 @@ app.post('/users/:username', (req, res) => {
 });
 
 app.post('/users/:username/:movieId', (req, res) => {
-  Users.findOneAndUpdate({Username: req.params.username}, {
+  Users.findOneAndUpdate({username: req.params.username}, {
     $push: {favoriteMovies: req.params.movieId}
 },
 { new: true},
@@ -137,7 +137,7 @@ app.post('/users/:username/:movieId', (req, res) => {
 });
 
 app.delete('/users/:username/:movieId', (req, res) => {
-  Users.findOneAndUpdate({Username: req.params.username}, {
+  Users.findOneAndUpdate({username: req.params.username}, {
     $pull: {favoriteMovies: req.params.movieId}
 },
 { new: true},
