@@ -27,68 +27,97 @@
     <td>Get a list of all movies</td>
     <td>/movies</td>
     <td>GET</td>
-    <td>A JSON object holding data about all movies</td>
+    <td> "Title: "Boomerang" <br>
+         "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken." <br>
+         "Genre": { <br>
+         "Name": "Romance", <br>
+         "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+       }, <br> 
+         "Director": { <br>
+         "Name": "Reginald Hudlin", <br>
+         "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
+         "Birthday": "1961-01-01" <br>
+       }, <br>
+         "Actors": [], <br>
+         "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
+         "Title": "Boomerang", <br>
+         "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
+         "ImagePath": "boomerang.png", <br>
+         "Featured": true <br></td>
   </tr>
   <tr>
     <td>Return data about a single movie by title</td>
     <td>/movies/:title</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie containing the movie title, actor, genre 
-      and year released. Example: {title: Soul Food
-                                   actor: Nia Long
-                                   genre: Drama
-                                   year: 1997}
+    <td>  "Genre": { <br>
+          "Name": "Romance", <br>
+          "Desription": "Romantic love stories between main characters that focus on passion, romance and affection." <br>
+        }, <br> 
+          "Director": { <br>
+          "Name": "Reginald Hudlin", <br>
+          "Bio": "Reginald Hudlin is an American film director, producer, screenwriter and comic-book writer.", <br>
+          "Birthday": "1961-01-01" <br>
+        }, <br>
+          "Actors": [], <br>
+          "_id": "61e4b3ccc71f3a0460c0d5c7", <br>
+          "Title": "Boomerang", <br>
+          "Description": "The tale of a successful womanizer and male chauvinist who meets his match and falls in love but gets his heart broken. He unknowingly falls in love with his dream woman while chasing the other woman.", <br>
+          "ImagePath": "boomerang.png", <br>
+          "Featured": true <br>
     </td>
   </tr>
   <tr>
     <td>Return data about a genre by name/title</td>
-    <td>/genres/:name</td>
+    <td>/genres/:genre</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie containing genre</td>
+    <td>{"Name": "Romance", <br>
+        "Description": "Romantic love stories between main characters that focus on passion, romance and affection."} <br>
+    </td>
   </tr>
   <tr>
     <td>Return data about a director</td>
-    <td>/directors/:name</td>
+    <td>/directors/:director</td>
     <td>GET</td>
-    <td>A JSON object holding data about a single movie director and his info.
-        Example: {director: George Tillman Jr. 
-                  birth year: 1969
-                  bio: Short biography of director}
+    <td> {"Name": "F. Gary Gray", <br>
+         "Bio": "F. Gary Gray is an American film director, producer, and music video director.", <br>
+         "Birthday": "1969-01-08" <br>
+         "Death": "2019-01-08" }<br>
     </td>
   </tr>
   <tr>
     <td>Allow new users to register</td>
     <td>/users</td>
     <td>POST</td>
-    <td>Create JSON object with new user data. Example: {Name: Quan Mccrea
-                                                         User Name: atlestate1
-                                                         Password: ATL1759_
-                                                         Email Address: atlestate1@yahoo.com}
+    <td>{ username: atlestate1 <br>
+         password: ATL1759_ <br>
+         email: atlestate1@yahoo.com } <br>
     </td>
   </tr>
   <tr>
     <td>Allow users to update their user info(username)</td>
     <td>/users/:username</td>
     <td>PUT</td>
-    <td>Update JSON object with updated username</td>
+    <td>{ username: atlestate1 <br>
+          password: ATL1759_ <br>
+          email: qspoindexter@gmail.com } <br></td>
   </tr>
   <tr>
     <td>Allow users to add a movie to their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>POST</td>
-    <td>A message indicating a successful add</td>
+    <td>A message indicating a successful add.</td>
   </tr>
   <tr>
     <td>Allow users to remove a movie from their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>DELETE</td>
-    <td>A message indicating a successful add</td>
+    <td>A message indicating a successful deletion.</td>
   </tr>
   <tr>
     <td>Allow existing users to deregister</td>
     <td>/users/:username</td>
     <td>DELETE</td>
-    <td>Delete JSON object containing user data</td>
+    <td>A message indicating a successful deletion.</td>
   </tr>
   
 </table>
