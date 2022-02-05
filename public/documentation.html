@@ -90,7 +90,9 @@
     <td>POST</td>
     <td>{ username: atlestate1 <br>
          password: ATL1759_ <br>
-         email: atlestate1@yahoo.com } <br>
+         email: atlestate1@yahoo.com <br>
+         birthday: 08-05-1983 <br>
+        }
     </td>
   </tr>
   <tr>
@@ -99,25 +101,42 @@
     <td>PUT</td>
     <td>{ username: atlestate1 <br>
           password: ATL1759_ <br>
-          email: qspoindexter@gmail.com } <br></td>
+          email: qspoindexter@gmail.com <br>
+          birthday: 08-05-1983 } <br>
+    </td>
   </tr>
   <tr>
     <td>Allow users to add a movie to their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>POST</td>
-    <td>A message indicating a successful add.</td>
+    <td>{ _id: 61f436yt86548ecc9ewg <br>
+            username: atlestate1 <br>
+            password: ATL1759_ <br>
+            email: atlestate1@yahoo.com <br>
+            birthday: 08-05-1983 <br>
+            favoriteMovies: [6136refcc967810dsaocg75
+                             62r34eftygh56778oklbnud]<br>
+         } 
+    </td>    
   </tr>
   <tr>
     <td>Allow users to remove a movie from their list of favorites</td>
     <td>/users/:username/:favoriteMovies</td>
     <td>DELETE</td>
-    <td>A message indicating a successful deletion.</td>
+    <td>{ _id: 61f436yt86548ecc9ewg <br>
+          username: atlestate1 <br>
+          password: ATL1759_ <br>
+          email: atlestate1@yahoo.com <br>
+          birthday: 08-05-1983 <br>
+          favoriteMovies: [6136refcc967810dsaocg75] <br>
+        } 
+    </td>
   </tr>
   <tr>
     <td>Allow existing users to deregister</td>
     <td>/users/:username</td>
     <td>DELETE</td>
-    <td>A message indicating a successful deletion.</td>
+    <td>rmcody2005 was successfully deleted.</td>
   </tr>
   
 </table>
