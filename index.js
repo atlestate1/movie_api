@@ -81,17 +81,17 @@ app.get('/directors/:director', passport.authenticate('jwt', {session: false}), 
 });
 
 app.post('/users', passport.authenticate('jwt', {session: false}), (req, res) => {
-  Users.findOne({ Username: req.body.Username })
+  Users.findOne({ username: req.body.username })
     .then((user) => {
       if (user) {
-        return res.status(400).send(req.body.Username + 'already exists');
+        return res.status(400).send(req.body.username + 'already exists');
       } else {
-        Users
+        User
           .create({
-            Username: req.body.Username,
-            Password: req.body.Password,
-            Email: req.body.Email,
-            Birthday: req.body.Birthday
+            username: req.body.username,
+            password: req.body.password,
+            email: req.body.email,
+            birthday: req.body.birthday
           })
           .then((user) =>{res.status(201).json(user) })
         .catch((error) => {
@@ -107,12 +107,12 @@ app.post('/users', passport.authenticate('jwt', {session: false}), (req, res) =>
 });
 
 app.post('/users/:username', passport.authenticate('jwt', {session: false}), (req, res) => {
-  Users.findOneAndUpdate({ Username: req.params.username }, { $set:
+  Users.findOneAndUpdate({ username: req.params.username }, { $set:
     {
-      Username: req.body.Username,
-      Password: req.body.Password,
-      Email: req.body.Email,
-      Birthday: req.body.Birthday
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+      birthday: req.body.birthday
     }
   },
   { new: true }, // This line makes sure that the updated document is returned
@@ -157,7 +157,7 @@ app.delete('/users/:username/:movieId', passport.authenticate('jwt', {session: f
 });
 
 app.delete('/users/:username', passport.authenticate('jwt', {session: false}), (req, res) => {
-  Users.findOneAndRemove({ Username: req.params.username})
+  Users.findOneAndRemove({username: req.params.username})
     .then((user) =>{
         if (!user) {
             res.status(400).send(req.params.username + ' was not found');
