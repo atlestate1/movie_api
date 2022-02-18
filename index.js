@@ -86,8 +86,7 @@ app.post('/users', passport.authenticate('jwt', {session: false}), (req, res) =>
       if (user) {
         return res.status(400).send(req.body.username + 'already exists');
       } else {
-        User
-          .create({
+        Users.create({
             username: req.body.username,
             password: req.body.password,
             email: req.body.email,
