@@ -80,7 +80,7 @@ app.get('/directors/:director', passport.authenticate('jwt', {session: false}), 
   });
 });
 
-app.post('/users', passport.authenticate('jwt', {session: false}), (req, res) => {
+app.post('/users', (req, res) => {
   Users.findOne({ username: req.body.username })
     .then((user) => {
       if (user) {
@@ -105,7 +105,7 @@ app.post('/users', passport.authenticate('jwt', {session: false}), (req, res) =>
     });
 });
 
-app.post('/users/:username', passport.authenticate('jwt', {session: false}), (req, res) => {
+app.put('/users/:username', passport.authenticate('jwt', {session: false}), (req, res) => {
   Users.findOneAndUpdate({ username: req.params.username }, { $set:
     {
       username: req.body.username,
