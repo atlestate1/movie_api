@@ -103,7 +103,7 @@ app.post('/users', [
   check('Password', 'Password is required').not().isEmpty(),
   check('Email', 'Email does not appear to be valid').isEmail()
 ], (req, res) => {
-  let hashedPassword = Users.hashPassword(req.body.Password);
+  let hashedPassword = Users.hashPassword(req.body.password);
   Users.findOne({ username: req.body.username })
     .then((user) => {
       if (user) {
@@ -137,7 +137,7 @@ app.post('/users/:username', passport.authenticate('jwt', {session: false}), (re
       birthday: req.body.birthday
     }
   },
-  { new: true }, // This line makes sure that the updated document is returned
+  { new: true }, 
   (err, updatedUser) => {
     if(err) {
       console.error(err);
