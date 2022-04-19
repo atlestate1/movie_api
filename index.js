@@ -45,7 +45,7 @@ app.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
   res.send('Welcome to MyFlix!');
 });
 
-app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/movies', (req, res) => {
   movieAPI.find()
     .then((movies) => {
       res.status(201).json(movies);
